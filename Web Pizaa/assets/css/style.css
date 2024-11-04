@@ -499,6 +499,7 @@ a.theme-btn {
     font-family: var(--heading-font);
     text-transform: uppercase;
     background: var(--primary-color);
+    border-radius: 10px;
 }
 
 .theme-btn i,
