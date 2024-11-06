@@ -4363,7 +4363,7 @@ h6,
     background: white;
     -webkit-animation: sticky 1s;
     animation: sticky 1s;
-    -webkit-box-shadow: 0px 0px 30px 0px rgba(87, 95, 245, 0.1);
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(253, 253, 253, 0.1);
     box-shadow: 0px 0px 30px 0px rgba(87, 95, 245, 0.1);
 }
 
@@ -4838,7 +4838,7 @@ h6,
     font-weight: 400;
     padding-top: 12px;
     padding-bottom: 12px;
-    color: rgba(255, 255, 255, 0.65);
+    color: rgb(255, 255, 255);
 }
 
 .main-header.white-menu .top-left:before {
@@ -4905,12 +4905,9 @@ h6,
 .main-header.white-menu .menu-sidebar>button {
     --c: conic-gradient(from -90deg, white 90deg, #0000 0);
 }
-
 .main-header.white-menu.fixed-header .header-upper {
-    background: #222222;
+    background:#660000;
 }
-
-
 /* Menu Sidebar */
 
 .menu-sidebar {

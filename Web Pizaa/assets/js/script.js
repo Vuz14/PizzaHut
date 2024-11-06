@@ -170,8 +170,6 @@
 			  //}
 			}, second)
         };
-        
-        
         // ## Testimonial Slider
         if ($('.testimonials-active').length) {
             $('.testimonials-active').slick({
