@@ -4905,9 +4905,12 @@ h6,
 .main-header.white-menu .menu-sidebar>button {
     --c: conic-gradient(from -90deg, white 90deg, #0000 0);
 }
+
 .main-header.white-menu.fixed-header .header-upper {
-    background:#660000;
+    background: #660000;
 }
+
+
 /* Menu Sidebar */
 
 .menu-sidebar {
@@ -6690,6 +6693,20 @@ h6,
 
 
 /*******************************************************/
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page-banner-area {
+    position: relative;
+    overflow: hidden;
+}
 
 .about-us-content {
     max-width: 510px;
