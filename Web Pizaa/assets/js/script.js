@@ -124,11 +124,7 @@
                         document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
                         document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
                         document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
-                    //do something later when date is reached
-                    //if (distance < 0) {
-                    //  clearInterval(x);
-                    //  'IT'S MY BIRTHDAY!;
-                    //}
+
                 }, second)
         };
         // ## Testimonial Slider
@@ -566,10 +562,6 @@
     });
 
 
-    /* ==========================================================================
-       When document is resize, do
-    ========================================================================== */
-
     $(window).on('resize', function() {
         var mobileWidth = 992;
         var navcollapse = $('.navigation li.dropdown');
@@ -577,11 +569,6 @@
         navcollapse.children('.megamenu').hide();
 
     });
-
-
-    /* ==========================================================================
-       When document is scroll, do
-    ========================================================================== */
 
     $(window).on('scroll', function() {
 
@@ -605,9 +592,6 @@
 
     });
 
-    /* ==========================================================================
-       When document is loaded, do
-    ========================================================================== */
 
     $(window).on('load', function() {
 
