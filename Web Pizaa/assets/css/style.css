@@ -111,6 +111,19 @@ footer:after {
 
 /*======= Input Styles =======*/
 
+.pizza img {
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 input,
 select,
 textarea,
@@ -4713,7 +4726,8 @@ h6,
 
 .nav-search {
     position: relative;
-    margin-left: 40px;
+    margin-left: 30px;
+    margin-right: 300px;
 }
 
 @media only screen and (max-width: 1299px) {
@@ -5848,7 +5862,7 @@ h6,
 
 .hero-btns .header-number {
     display: block;
-    margin-left: 0;
+    margin-left: 10px;
 }
 
 

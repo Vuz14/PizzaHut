@@ -1,9 +1,44 @@
-@font-face {font-family: "SFProDisplay";src: url("../font/SFPRODISPLAY/SFProDisplay-Regular.ttf") format("truetype");font-weight: 400;font-display: fallback;}
-@font-face {font-family: "SFProDisplay";src: url("../font/SFPRODISPLAY/SFProDisplay-Light.ttf") format("truetype");font-weight: 300;font-display: fallback;}
-@font-face {font-family: "SFProDisplay";src: url("../font/SFPRODISPLAY/SFProDisplay-Medium.ttf") format("truetype");font-weight: 500;font-display: fallback;}
-@font-face {font-family: "SFProDisplay";src: url("../font/SFPRODISPLAY/SFProDisplay-Bold.ttf") format("truetype");font-weight: bold;font-display: fallback;}
-@font-face {font-family: "SFProDisplay";src: url("../font/SFPRODISPLAY/SFProDisplay-Semibold.ttf") format("truetype");font-weight: 600;font-display: fallback;}
-@font-face {font-family: "SFProDisplay";src: url("../font/SFPRODISPLAY/SFProDisplay-Heavy.ttf") format("truetype");font-weight: 800;font-display: fallback;}
+@font-face {
+    font-family: "SFProDisplay";
+    src: url("../font/SFPRODISPLAY/SFProDisplay-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "SFProDisplay";
+    src: url("../font/SFPRODISPLAY/SFProDisplay-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "SFProDisplay";
+    src: url("../font/SFPRODISPLAY/SFProDisplay-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "SFProDisplay";
+    src: url("../font/SFPRODISPLAY/SFProDisplay-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "SFProDisplay";
+    src: url("../font/SFPRODISPLAY/SFProDisplay-Semibold.ttf") format("truetype");
+    font-weight: 600;
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "SFProDisplay";
+    src: url("../font/SFPRODISPLAY/SFProDisplay-Heavy.ttf") format("truetype");
+    font-weight: 800;
+    font-display: fallback;
+}
 
 *,
 *::before,
@@ -14,6 +49,7 @@
     list-style-type: none;
     text-decoration: none;
 }
+
 :root {
     --red: #b5292f;
     --lightest-gray: rgb(249, 249, 249);
@@ -59,7 +95,6 @@ button {
     cursor: pointer;
 }
 
-
 select {
     background-color: #eee;
     padding: 10px 20px;
@@ -72,7 +107,11 @@ select {
     cursor: pointer;
 }
 
-body,input,button,textarea,pre {
+body,
+input,
+button,
+textarea,
+pre {
     font-family: SFProDisplay, sans-serif;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -107,15 +146,14 @@ body,input,button,textarea,pre {
     display: none;
 }
 
-.switch-input:checked + .switch {
+.switch-input:checked+.switch {
     background-color: var(--red);
 }
 
-.switch-input:checked + .switch:after {
+.switch-input:checked+.switch:after {
     transform: translateX(20px);
     background-color: #fff;
 }
-
 
 .header {
     display: flex;
@@ -329,13 +367,13 @@ body,input,button,textarea,pre {
 }
 
 .sidebar.open .channel-logo {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
 }
 
 .sidebar .channel-logo>img {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
 }
 
 .middle-sidebar {
@@ -483,9 +521,7 @@ body,input,button,textarea,pre {
     /* max-width: 500px;*/
     min-width: 290px;
     position: relative;
-    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
-        inset -5px -5px 5px rgba(255, 255, 255, 0.5),
-        5px 5px 5px rgba(0, 0, 0, 0.05), -5px -5px 5px rgba(255, 255, 255, 0.5);
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05), inset -5px -5px 5px rgba(255, 255, 255, 0.5), 5px 5px 5px rgba(0, 0, 0, 0.05), -5px -5px 5px rgba(255, 255, 255, 0.5);
     border-radius: 15px;
     margin: 12px;
 }
@@ -548,7 +584,9 @@ body,input,button,textarea,pre {
     color: #fff;
 }
 
+
 /* customer */
+
 .table {
     width: 100%;
     overflow: auto;
@@ -558,7 +596,7 @@ body,input,button,textarea,pre {
 
 .setting {
     position: absolute;
-    top:-50%;
+    top: -50%;
     left: 50%;
     transform: translate(-50%, 50%);
 }
@@ -594,12 +632,14 @@ tbody tr td {
     border-radius: 99px;
 }
 
+
 /* Product */
+
 .product-all {
     padding: 20px 80px;
 }
 
-.btn-control-large{
+.btn-control-large {
     background-color: var(--red);
     height: 40px;
     color: #fff;
@@ -741,7 +781,9 @@ tbody tr td {
     color: white;
 }
 
+
 /* Modal */
+
 .modal {
     background-color: rgba(0, 0, 0, 0.6);
     position: fixed;
@@ -821,7 +863,6 @@ tbody tr td {
 .form-group {
     margin-bottom: 10px;
 }
-
 
 .form-label {
     margin-bottom: 5px;
@@ -930,6 +971,7 @@ input[type="file"] {
     border-right: 1px solid #eee;
 }
 
+
 /* Account  */
 
 .modal.signup .modal-container {
@@ -955,7 +997,7 @@ label a {
     color: var(--red);
 }
 
-#btn-add-account{
+#btn-add-account {
     background-color: var(--red);
     height: 30px;
     color: #fff;
@@ -965,6 +1007,7 @@ label a {
 
 
 /* Detail Order */
+
 .admin-control {
     display: flex;
     justify-content: space-between;
@@ -989,7 +1032,7 @@ label a {
 
 .admin-control-right button:hover {
     background-color: var(--red);
-    color:#fff
+    color: #fff
 }
 
 .form-search {
@@ -1266,6 +1309,7 @@ label a {
     column-gap: 10px;
 }
 
+
 /* Page Nav  */
 
 .page-nav,
@@ -1296,58 +1340,60 @@ label a {
     border: 2px solid var(--red);
 }
 
+
 /* order-statistical */
 
-.order-statistical{
+.order-statistical {
     display: flex;
     margin: 30px 0;
     column-gap: 20px;
 }
 
-.order-statistical-item{
+.order-statistical-item {
     box-shadow: 0px 1px 5px 2px #f1f1f1;
-    width: 32.1%;   
+    width: 32.1%;
     display: flex;
     padding: 20px 40px;
     align-items: center;
     justify-content: space-between;
 }
 
-.order-statistical-item-icon i{
+.order-statistical-item-icon i {
     font-size: 45px;
     margin-right: 25px;
     color: var(--red);
 }
 
-.order-statistical-item-content-desc{
+.order-statistical-item-content-desc {
     margin-bottom: 6px;
     font-size: 14px;
-    color:#888
+    color: #888
 }
 
-.access-denied-section{
+.access-denied-section {
     position: absolute;
-    top:50%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
 }
 
-.access-denied-img{
+.access-denied-img {
     width: 100%;
 }
 
-.no-result{
+.no-result {
     width: 100%;
     text-align: center;
     margin: 10px 0;
 }
 
-.no-result-h{
+.no-result-h {
     font-size: 20px;
     margin: 10px
 }
-.no-result i{
+
+.no-result i {
     color: #757575;
     font-size: 80px;
     margin-top: 30px;

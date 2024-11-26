@@ -1,7 +1,7 @@
 //Toast message
 function toast({
     title = 'Success',
-    message = 'Tạo tài khoản thành công',
+    message = 'Account created successfully',
     type = 'success',
     duration = 3000
 }) {

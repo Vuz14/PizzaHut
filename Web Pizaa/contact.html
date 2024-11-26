@@ -6,13 +6,11 @@
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <title>Larana Pizza</title>
     <!-- Favicon Icon -->
     <link rel="shortcut icon" href="assets/images/logos/favicon1.png" type="image/x-icon">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
-
     <!-- Flaticon -->
     <link rel="stylesheet" href="assets/css/flaticon.min.css">
     <!-- Font Awesome -->
@@ -29,7 +27,10 @@
     <link rel="stylesheet" href="assets/css/slick.min.css">
     <!-- Main Style -->
     <link rel="stylesheet" href="assets/css/style.css">
-
+    <link rel="stylesheet" href="assets/css/main1.css">
+    <link rel="stylesheet" href="assets/css/home-responsive.css">
+    <link rel="stylesheet" href="assets/css/toast-message.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome-pro-v6-6.2.0/css/all.min.css" />
 </head>
 
 <body>
@@ -45,7 +46,7 @@
                     <div class="header-inner rel d-flex align-items-center">
                         <div class="logo-outer">
                             <div class="logo">
-                                <a href="index2.html"><img src="assets/images/logos/logo2.png" alt="Logo" title="Logo"></a>
+                                <a href="index.html"><img src="assets/images/logos/logo2.png" alt="Logo" title="Logo"></a>
                             </div>
                         </div>
 
@@ -58,8 +59,6 @@
                                             <img src="assets/images/logos/logo2.png" alt="Logo" title="Logo">
                                         </a>
                                     </div>
-
-                                    <!-- Toggle Button -->
                                     <button type="button" class="navbar-toggle" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
@@ -70,25 +69,23 @@
                                 <div class="navbar-collapse collapse clearfix">
                                     <ul class="navigation clearfix">
                                         <li><a href="index2.html">Home</a></li>
-                                        <li><a href="menu-pizza.html">Menu</a></li>
+                                        <li><a href="menu.html">Menu</a></li>
                                         <li><a href="shop.html">Shop</a></li>
-                                        <li><a href="blog.html">Events</a></li>
-                                        <li class="dropdown"><a href="#">Contact</a>
-                                            <ul>
-                                                <li><a href="contact.html">Contact with us</a></li>
-                                                <li><a href="history.html">Job portal.</a></li>
-                                            </ul>
+                                        <li><a href="http://localhost/WebPizaa/WebPizaa/discount.php">Discount</a></li>
+                                        <li><a href="contact.html">Contact</a>
                                         </li>
                                         <li><a href="about.html">About Us</a></li>
                                     </ul>
+                                    <div class="header-number">
+                                        <i class="far fa-phone"></i>Call : <a href="#">0123456789</a>
+                                    </div>
                                 </div>
 
                             </nav>
                         </div>
 
-                        <div class="header-number">
-                            <i class="far fa-phone"></i>Call : <a href="callto:+88012345688">0123456789</a>
-                        </div>
+
+
                         <!-- Nav Search -->
                         <div class="nav-search py-10">
                             <button class="far fa-search"></button>
@@ -100,11 +97,29 @@
 
                         <!-- Menu Button -->
                         <div class="menu-btns">
-                            <button><i class="far fa-shopping-cart"></i> <span>2</span></button>
-                            <a href="contact.html" class="theme-btn">Book now <i class="far fa-arrow-alt-right"></i></a>
-                            <!-- menu sidbar -->
-                            <div class="menu-sidebar">
-                                <button class="bg-transparent"></button>
+                            <div class="header-middle-right">
+                                <ul class="header-middle-right-list">
+
+                                    <li class="header-middle-right-item dropdown open">
+                                        <i class="fa-light fa-user"></i>
+                                        <div class="auth-container">
+                                            <span class="text-dndk">Login / Register</span>
+                                            <span class="text-tk">Account <i class="fa-sharp fa-solid fa-caret-down"></i></span>
+                                        </div>
+
+                                        <ul class="header-middle-right-menu">
+                                            <li><a id="login" href="javascript:;"><i class="fa-light fa-right-to-bracket"></i> Login</a></li>
+                                            <li><a id="signup" href="javascript:;"><i class="fa-light fa-user-plus"></i>  Register</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="header-middle-right-item open" onclick="openCart()">
+                                        <div class="cart-icon-menu">
+                                            <i class="fa-light fa-basket-shopping"></i>
+                                            <span class="count-product-cart">0</span>
+                                        </div>
+                                        <span>Shopping Cart</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>

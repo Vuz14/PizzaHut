@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="assets/css/slick.min.css">
     <!-- Main Style -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/main1.css">
     <link rel="stylesheet" href="assets/css/home-responsive.css">
     <link rel="stylesheet" href="assets/css/toast-message.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome-pro-v6-6.2.0/css/all.min.css" />
@@ -72,23 +72,20 @@
                                         <li><a href="index2.html">Home</a></li>
                                         <li><a href="menu.html">Menu</a></li>
                                         <li><a href="shop.html">Shop</a></li>
-                                        <li><a href="discount.html">Events</a></li>
-                                        <li class="dropdown"><a href="#">Contact</a>
-                                            <ul>
-                                                <li><a href="contact.html">Contact with us</a></li>
-                                                <li><a href="history.html">Job portal.</a></li>
-                                            </ul>
+                                        <li><a href="http://localhost/WebPizaa/WebPizaa/discount.php">Discount</a></li>
+                                        <li><a href="contact.html">Contact</a>
                                         </li>
                                         <li><a href="about.html">About Us</a></li>
                                     </ul>
+                                    <div class="header-number">
+                                        <i class="far fa-phone"></i>Call : <a href="#">0123456789</a>
+                                    </div>
                                 </div>
 
                             </nav>
                         </div>
 
-                        <div class="header-number">
-                            <i class="far fa-phone"></i>Call : <a href="callto:+88012345688">0123456789</a>
-                        </div>
+
 
                         <!-- Nav Search -->
                         <div class="nav-search py-10">
@@ -101,29 +98,19 @@
 
                         <!-- Menu Button -->
                         <div class="menu-btns">
-
-                            <a href="contact.html" class="theme-btn style-two">Book now <i class="far fa-arrow-alt-right"></i></a>
                             <div class="header-middle-right">
                                 <ul class="header-middle-right-list">
-                                    <li class="header-middle-right-item dnone open" onclick="openSearchMb()">
-                                        <div class="cart-icon-menu">
-                                            <i class="fa-light fa-magnifying-glass"></i>
-                                        </div>
-                                    </li>
-                                    <li class="header-middle-right-item close" onclick="closeSearchMb()">
-                                        <div class="cart-icon-menu">
-                                            <i class="fa-light fa-circle-xmark"></i>
-                                        </div>
-                                    </li>
+
                                     <li class="header-middle-right-item dropdown open">
                                         <i class="fa-light fa-user"></i>
                                         <div class="auth-container">
-                                            <span class="text-dndk">Đăng nhập / Đăng ký</span>
-                                            <span class="text-tk">Tài khoản <i class="fa-sharp fa-solid fa-caret-down"></i></span>
+                                            <span class="text-dndk">Login / Register</span>
+                                            <span class="text-tk">Account <i class="fa-sharp fa-solid fa-caret-down"></i></span>
                                         </div>
+
                                         <ul class="header-middle-right-menu">
-                                            <li><a id="login" href="javascript:;"><i class="fa-light fa-right-to-bracket"></i> Đăng nhập</a></li>
-                                            <li><a id="signup" href="javascript:;"><i class="fa-light fa-user-plus"></i> Đăng ký</a></li>
+                                            <li><a id="login" href="javascript:;"><i class="fa-light fa-right-to-bracket"></i> Login</a></li>
+                                            <li><a id="signup" href="javascript:;"><i class="fa-light fa-user-plus"></i>  Register</a></li>
                                         </ul>
                                     </li>
                                     <li class="header-middle-right-item open" onclick="openCart()">
@@ -131,7 +118,7 @@
                                             <i class="fa-light fa-basket-shopping"></i>
                                             <span class="count-product-cart">0</span>
                                         </div>
-                                        <span>Giỏ hàng</span>
+                                        <span>Shopping Cart</span>
                                     </li>
                                 </ul>
                             </div>
@@ -145,182 +132,6 @@
             </div>
             <!--End Header Upper-->
         </header>
-        <main>
-            <div class="container" id="account-user">
-                <div class="main-account">
-                    <div class="main-account-header">
-                        <h3>Thông tin tài khoản của bạn</h3>
-                        <p>Quản lý thông tin để bảo mật tài khoản</p>
-                    </div>
-                    <div class="main-account-body">
-                        <div class="main-account-body-col">
-                            <form action="" class="info-user">
-                                <div class="form-group">
-                                    <label for="infoname" class="form-label">Họ và tên</label>
-                                    <input class="form-control" type="text" name="infoname" id="infoname" placeholder="">
-                                </div>
-                                <div class="form-group">
-                                    <label for="infophone" class="form-label">Số điện thoại</label>
-                                    <input class="form-control" type="text" name="infophone" id="infophone" disabled="true" placeholder="">
-                                </div>
-                                <div class="form-group">
-                                    <label for="infoemail" class="form-label">Email</label>
-                                    <input class="form-control" type="email" name="infoemail" id="infoemail" placeholder="Thêm địa chỉ email của bạn">
-                                    <span class="inforemail-error form-message"></span>
-                                </div>
-                                <div class="form-group">
-                                    <label for="infoaddress" class="form-label">Địa chỉ</label>
-                                    <input class="form-control" type="text" name="infoaddress" id="infoaddress" placeholder="Thêm địa chỉ giao hàng của bạn">
-                                </div>
-                            </form>
-                        </div>
-                        <div class="main-account-body-col">
-                            <form action="" class="change-password">
-                                <div class="form-group">
-                                    <label for="" class="form-label w60">Mật khẩu hiện tại</label>
-                                    <input class="form-control" type="password" name="" id="password-cur-info" placeholder="Nhập mật khẩu hiện tại">
-                                    <span class="password-cur-info-error form-message"></span>
-                                </div>
-                                <div class="form-group">
-                                    <label for="" class="form-label w60">Mật khẩu mới </label>
-                                    <input class="form-control" type="password" name="" id="password-after-info" placeholder="Nhập mật khẩu mới">
-                                    <span class="password-after-info-error form-message"></span>
-                                </div>
-                                <div class="form-group">
-                                    <label for="" class="form-label w60">Xác nhận mật khẩu mới</label>
-                                    <input class="form-control" type="password" name="" id="password-comfirm-info" placeholder="Nhập lại mật khẩu mới">
-                                    <span class="password-after-comfirm-error form-message"></span>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="main-account-body-row">
-                            <div>
-                                <button id="save-info-user" onclick="changeInformation()"><i
-                            class="fa-regular fa-floppy-disk"></i> Lưu thay đổi</button>
-                            </div>
-                            <div>
-                                <button id="save-password" onclick="changePassword()"><i class="fa-regular fa-key"></i> Đổi
-                        mật khẩu</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container" id="order-history">
-                <div class="main-account">
-                    <div class="main-account-header">
-                        <h3>Quản lý đơn hàng của bạn</h3>
-                        <p>Xem chi tiết, trạng thái của những đơn hàng đã đặt.</p>
-                    </div>
-                    <div class="main-account-body">
-                        <div class="order-history-section">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-
-        <div class="modal signup-login">
-            <div class="modal-container">
-                <button class="form-close" onclick="closeModal()"><i class="fa-regular fa-xmark"></i></button>
-                <div class="forms mdl-cnt">
-                    <div class="form-content sign-up">
-                        <h3 class="form-title">
-                            Đăng ký tài khoản
-                        </h3>
-                        <p class="form-description">Đăng ký thành viên để mua hàng và nhận những ưu đãi đặc biệt từ chúng tôi </p>
-                        <form action="" class="signup-form">
-                            <div class="form-group">
-                                <label for="fullname" class="form-label">Tên đầy đủ</label>
-                                <input id="fullname" name="fullname" type="text" placeholder="VD: Nhật Sinh" class="form-control">
-                                <span class="form-message-name form-message"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone" class="form-label">Số điện thoại</label>
-                                <input id="phone" name="phone" type="text" placeholder="Nhập số điện thoại" class="form-control">
-                                <span class="form-message-phone form-message"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="form-label">Mật khẩu</label>
-                                <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
-                                <span class="form-message-password form-message"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
-                                <input id="password_confirmation" name="password_confirmation" placeholder="Nhập lại mật khẩu" type="password" class="form-control">
-                                <span class="form-message-password-confi form-message"></span>
-                            </div>
-                            <div class="form-group">
-                                <input class="checkbox" name="checkbox" required="" type="checkbox" id="checkbox-signup">
-                                <label for="checkbox-signup" class="form-checkbox">Tôi đồng ý với <a href="#"
-                                    title="chính sách trang web" target="_blank">chính sách trang web</a></label>
-                                <p class="form-message-checkbox form-message"></p>
-                            </div>
-                            <button class="form-submit" id="signup-button">Đăng ký</button>
-                        </form>
-                        <p class="change-login">Bạn đã có tài khoản ? <a href="javascript:;" class="login-link">Đăng nhập
-                            ngay</a></p>
-                    </div>
-                    <div class="form-content login">
-                        <h3 class="form-title">Đăng nhập tài khoản</h3>
-                        <p class="form-description">Đăng nhập thành viên để mua hàng và nhận những ưu đãi đặc biệt từ chúng tôi
-                        </p>
-                        <form action="" class="login-form">
-                            <div class="form-group">
-                                <label for="phone" class="form-label">Số điện thoại</label>
-                                <input id="phone-login" name="phone" type="text" placeholder="Nhập số điện thoại" class="form-control">
-                                <span class="form-message phonelog"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="form-label">Mật khẩu</label>
-                                <input id="password-login" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
-                                <span class="form-message-check-login form-message"></span>
-                            </div>
-                            <button class="form-submit" id="login-button">Đăng nhập</button>
-                        </form>
-                        <p class="change-login">Bạn chưa có tài khoản ? <a href="javascript:;" class="signup-link">Đăng kí
-                            ngay</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal-cart">
-            <div class="cart-container">
-                <div class="cart-header">
-                    <h3 class="cart-header-title"><i class="fa-regular fa-basket-shopping-simple"></i> Giỏ hàng</h3>
-                    <button class="cart-close" onclick="closeCart()"><i class="fa-sharp fa-solid fa-xmark"></i></button>
-                </div>
-                <div class="cart-body">
-                    <div class="gio-hang-trong">
-                        <i class="fa-thin fa-cart-xmark"></i>
-                        <p>Không có sản phẩm nào trong giỏ hàng của bạn</p>
-                    </div>
-                    <ul class="cart-list">
-                    </ul>
-                </div>
-                <div class="cart-footer">
-                    <div class="cart-total-price">
-                        <p class="text-tt">Tổng tiền:</p>
-                        <p class="text-price">0đ</p>
-                    </div>
-                    <div class="cart-footer-payment">
-                        <button class="them-mon"><i class="fa-regular fa-plus"></i> Thêm món</button>
-                        <button class="thanh-toan disabled">Thanh toán</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal detail-order">
-            <div class="modal-container mdl-cnt">
-                <h3 class="modal-container-title">Thông tin đơn hàng</h3>
-                <button class="form-close" onclick="closeModal()"><i class="fa-regular fa-xmark"></i></button>
-                <div class="detail-order-content">
-                </div>
-            </div>
-        </div>
-        <!--Form Back Drop-->
-        <div class="form-back-drop"></div>
 
         <!-- Hidden Sidebar -->
         <section class="hidden-bar">
@@ -363,7 +174,7 @@
                             <span class="hero-title mb-40" data-aos="fade-left" data-aos-delay="150" data-aos-duration="1500" data-aos-offset="50">Italian</span>
                             <div class="hero-content-two text-white" data-aos="fade-up" data-aos-duration="1500" data-aos-offset="50">
                                 <p>Welcome to culinary sanctuary there every dish tells every bite is an adventure at our food</p>
-                                <span class="price">price only $55</span>
+                                <span class="price1">price only $55</span>
                                 <a href="shop.html" class="theme-btn">order now <i class="far fa-arrow-alt-right"></i></a>
                             </div>
                         </div>
@@ -1093,106 +904,6 @@
                         <img src="assets/images/instagram/instagram5.jpg" alt="Instagram">
                         <a href="assets/images/instagram/instagram5.jpg"><i class="fab fa-instagram"></i></a>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- Instagram area end -->
-
-        <div class="modal signup-login">
-            <div class="modal-container">
-                <button class="form-close" onclick="closeModal()"><i class="fa-regular fa-xmark"></i></button>
-                <div class="forms mdl-cnt">
-                    <div class="form-content sign-up">
-                        <h3 class="form-title">
-                            Đăng ký tài khoản
-                        </h3>
-                        <p class="form-description">Đăng ký thành viên để mua hàng và nhận những ưu đãi đặc biệt từ chúng tôi </p>
-                        <form action="" class="signup-form">
-                            <div class="form-group">
-                                <label for="fullname" class="form-label">Tên đầy đủ</label>
-                                <input id="fullname" name="fullname" type="text" placeholder="VD: Nhật Sinh" class="form-control">
-                                <span class="form-message-name form-message"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone" class="form-label">Số điện thoại</label>
-                                <input id="phone" name="phone" type="text" placeholder="Nhập số điện thoại" class="form-control">
-                                <span class="form-message-phone form-message"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="form-label">Mật khẩu</label>
-                                <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
-                                <span class="form-message-password form-message"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
-                                <input id="password_confirmation" name="password_confirmation" placeholder="Nhập lại mật khẩu" type="password" class="form-control">
-                                <span class="form-message-password-confi form-message"></span>
-                            </div>
-                            <div class="form-group">
-                                <input class="checkbox" name="checkbox" required="" type="checkbox" id="checkbox-signup">
-                                <label for="checkbox-signup" class="form-checkbox">Tôi đồng ý với <a href="#"
-                                        title="chính sách trang web" target="_blank">chính sách trang web</a></label>
-                                <p class="form-message-checkbox form-message"></p>
-                            </div>
-                            <button class="form-submit" id="signup-button">Đăng ký</button>
-                        </form>
-                        <p class="change-login">Bạn đã có tài khoản ? <a href="javascript:;" class="login-link">Đăng nhập
-                                ngay</a></p>
-                    </div>
-                    <div class="form-content login">
-                        <h3 class="form-title">Đăng nhập tài khoản</h3>
-                        <p class="form-description">Đăng nhập thành viên để mua hàng và nhận những ưu đãi đặc biệt từ chúng tôi
-                        </p>
-                        <form action="" class="login-form">
-                            <div class="form-group">
-                                <label for="phone" class="form-label">Số điện thoại</label>
-                                <input id="phone-login" name="phone" type="text" placeholder="Nhập số điện thoại" class="form-control">
-                                <span class="form-message phonelog"></span>
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="form-label">Mật khẩu</label>
-                                <input id="password-login" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
-                                <span class="form-message-check-login form-message"></span>
-                            </div>
-                            <button class="form-submit" id="login-button">Đăng nhập</button>
-                        </form>
-                        <p class="change-login">Bạn chưa có tài khoản ? <a href="javascript:;" class="signup-link">Đăng kí
-                                ngay</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal-cart">
-            <div class="cart-container">
-                <div class="cart-header">
-                    <h3 class="cart-header-title"><i class="fa-regular fa-basket-shopping-simple"></i> Giỏ hàng</h3>
-                    <button class="cart-close" onclick="closeCart()"><i class="fa-sharp fa-solid fa-xmark"></i></button>
-                </div>
-                <div class="cart-body">
-                    <div class="gio-hang-trong">
-                        <i class="fa-thin fa-cart-xmark"></i>
-                        <p>Không có sản phẩm nào trong giỏ hàng của bạn</p>
-                    </div>
-                    <ul class="cart-list">
-                    </ul>
-                </div>
-                <div class="cart-footer">
-                    <div class="cart-total-price">
-                        <p class="text-tt">Tổng tiền:</p>
-                        <p class="text-price">0đ</p>
-                    </div>
-                    <div class="cart-footer-payment">
-                        <button class="them-mon"><i class="fa-regular fa-plus"></i> Thêm món</button>
-                        <button class="thanh-toan disabled">Thanh toán</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal detail-order">
-            <div class="modal-container mdl-cnt">
-                <h3 class="modal-container-title">Thông tin đơn hàng</h3>
-                <button class="form-close" onclick="closeModal()"><i class="fa-regular fa-xmark"></i></button>
-                <div class="detail-order-content">
                 </div>
             </div>
         </div>

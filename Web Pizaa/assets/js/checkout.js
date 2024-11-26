@@ -1,7 +1,7 @@
 const PHIVANCHUYEN = 30000;
 let priceFinal = document.getElementById("checkout-cart-price-final");
 // Trang thanh toan
-function thanhtoanpage(option,product) {
+function thanhtoanpage(option, product) {
     // Xu ly ngay nhan hang
     let today = new Date();
     let ngaymai = new Date();
@@ -23,8 +23,8 @@ function thanhtoanpage(option,product) {
     </a>`
     document.querySelector('.date-order').innerHTML = dateorderhtml;
     let pickdate = document.getElementsByClassName('pick-date')
-    for(let i = 0; i < pickdate.length; i++) {
-        pickdate[i].onclick = function () {
+    for (let i = 0; i < pickdate.length; i++) {
+        pickdate[i].onclick = function() {
             document.querySelector(".pick-date.active").classList.remove("active");
             this.classList.add('active');
         }
@@ -75,7 +75,7 @@ function thanhtoanpage(option,product) {
                     <span>${vnd(PHIVANCHUYEN)}</span>
                 </div>
             </div>`
-            // Tong tien
+                // Tong tien
             priceFinal.innerText = vnd((product.soluong * product.price) + PHIVANCHUYEN);
             break;
     }
@@ -88,7 +88,7 @@ function thanhtoanpage(option,product) {
     let tudenlay = document.querySelector('#tudenlay');
     let tudenlayGroup = document.querySelector('#tudenlay-group');
     let chkShip = document.querySelectorAll(".chk-ship");
-    
+
     tudenlay.addEventListener('click', () => {
         giaotannoi.classList.remove("active");
         tudenlay.classList.add("active");
@@ -180,7 +180,7 @@ function dathangngay() {
     let productInfo = document.getElementById("product-detail-content");
     let datHangNgayBtn = productInfo.querySelector(".button-dathangngay");
     datHangNgayBtn.onclick = () => {
-        if(localStorage.getItem('currentuser')) {
+        if (localStorage.getItem('currentuser')) {
             let productId = datHangNgayBtn.getAttribute("data-product");
             let soluong = parseInt(productInfo.querySelector(".buttons_added .input-qty").value);
             let notevalue = productInfo.querySelector("#popup-detail-note").value;
@@ -190,7 +190,7 @@ function dathangngay() {
             a.soluong = parseInt(soluong);
             a.note = ghichu;
             checkoutpage.classList.add('active');
-            thanhtoanpage(2,a);
+            thanhtoanpage(2, a);
             closeCart();
             body.style.overflow = "hidden"
         } else {
@@ -216,28 +216,28 @@ function xulyDathang(product) {
     let giaovaogio = document.querySelector("#deliverytime");
     let currentUser = JSON.parse(localStorage.getItem('currentuser'));
     // Hinh thuc giao & Dia chi nhan hang
-    if(giaotannoi.classList.contains("active")) {
+    if (giaotannoi.classList.contains("active")) {
         diachinhan = document.querySelector("#diachinhan").value;
         hinhthucgiao = giaotannoi.innerText;
     }
-    if(tudenlay.classList.contains("active")){
+    if (tudenlay.classList.contains("active")) {
         let chinhanh1 = document.querySelector("#chinhanh-1");
         let chinhanh2 = document.querySelector("#chinhanh-2");
-        if(chinhanh1.checked) {
-            diachinhan = "273 An Dương Vương, Phường 3, Quận 5";
+        if (chinhanh1.checked) {
+            diachinhan = "110 Phước Tường 5, Hoà Phát, Cẩm Lệ, Đà Nẵng";
         }
-        if(chinhanh2.checked) {
-            diachinhan = "04 Tôn Đức Thắng, Phường Bến Nghé, Quận 1";
+        if (chinhanh2.checked) {
+            diachinhan = "111 Phước Tường 5, Hoà Phát, Cẩm Lệ, Đà Nẵng";
         }
         hinhthucgiao = tudenlay.innerText;
     }
 
     // Thoi gian nhan hang
-    if(giaongay.checked) {
-        thoigiangiao = "Giao ngay khi xong";
+    if (giaongay.checked) {
+        thoigiangiao = "Delivered immediately upon completion";
     }
 
-    if(giaovaogio.checked) {
+    if (giaovaogio.checked) {
         thoigiangiao = document.querySelector(".choise-time").value;
     }
 
@@ -245,7 +245,7 @@ function xulyDathang(product) {
     let order = localStorage.getItem("order") ? JSON.parse(localStorage.getItem("order")) : [];
     let madon = createId(order);
     let tongtien = 0;
-    if(product == undefined) {
+    if (product == undefined) {
         currentUser.cart.forEach(item => {
             item.madon = madon;
             item.price = getpriceProduct(item.id);
@@ -257,12 +257,12 @@ function xulyDathang(product) {
         product.price = getpriceProduct(product.id);
         tongtien += product.price * product.soluong;
         orderDetails.push(product);
-    }   
-    
+    }
+
     let tennguoinhan = document.querySelector("#tennguoinhan").value;
     let sdtnhan = document.querySelector("#sdtnhan").value
 
-    if(tennguoinhan == "" || sdtnhan == "" || diachinhan == "") {
+    if (tennguoinhan == "" || sdtnhan == "" || diachinhan == "") {
         toast({ title: 'Chú ý', message: 'Vui lòng nhập đầy đủ thông tin !', type: 'warning', duration: 4000 });
     } else {
         let donhang = {
@@ -276,22 +276,22 @@ function xulyDathang(product) {
             sdtnhan: sdtnhan,
             diachinhan: diachinhan,
             thoigiandat: new Date(),
-            tongtien:tongtien,
+            tongtien: tongtien,
             trangthai: 0
         }
-    
+
         order.unshift(donhang);
-        if(product == null) {
+        if (product == null) {
             currentUser.cart.length = 0;
         }
-    
-        localStorage.setItem("order",JSON.stringify(order));
-        localStorage.setItem("currentuser",JSON.stringify(currentUser));
-        localStorage.setItem("orderDetails",JSON.stringify(orderDetails));
+
+        localStorage.setItem("order", JSON.stringify(order));
+        localStorage.setItem("currentuser", JSON.stringify(currentUser));
+        localStorage.setItem("orderDetails", JSON.stringify(orderDetails));
         toast({ title: 'Thành công', message: 'Đặt hàng thành công !', type: 'success', duration: 1000 });
-        setTimeout((e)=>{
-            window.location = "/";
-        },2000);  
+        setTimeout((e) => {
+            window.location = "index.html";
+        }, 2000);
     }
 }
 
