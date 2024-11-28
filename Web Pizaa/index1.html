@@ -496,13 +496,13 @@
                             </div>
                             <div class="content-group chk-ship" id="giaotannoi-group">
                                 <p class="checkout-content-label">Delivery time</p>
-                                <div class="delivery-time">
+                                <div class="delivery-time" style="color: black;">
                                     <input type="radio" name="giaongay" id="giaongay" class="radio">
-                                    <label for="giaongay">Delivered immediately upon completion</label>
+                                    <label style="color: black;" for="giaongay">Delivered immediately upon completion</label>
                                 </div>
                                 <div class="delivery-time">
                                     <input type="radio" name="giaongay" id="deliverytime" class="radio">
-                                    <label for="deliverytime">Delivered on time</label>
+                                    <label style="color: black;" for="deliverytime">Delivered on time</label>
                                     <select class="choise-time">
                                     <option data-hours="08" value="08:00" selected="selected">08:00 - 09:00</option>
 
@@ -548,7 +548,7 @@
                             </div>
                             <div class="content-group">
                                 <p class="checkout-content-label">Note</p>
-                                <textarea type="text" class="note-order" placeholder="Nhập ghi chú"></textarea>
+                                <textarea type="text" class="note-order" placeholder="Enter note"></textarea>
                             </div>
                         </div>
                     </div>
@@ -577,25 +577,26 @@
                     </div>
                 </div>
                 <div class="checkout-col-right">
-                    <p class="checkout-content-label">Đơn hàng</p>
+                    <p class="checkout-content-label">Order</p>
                     <div class="bill-total" id="list-order-checkout">
                     </div>
                     <div class="bill-payment">
                         <div class="total-bill-order">
                         </div>
                         <div class="policy-note">
-                            Bằng việc bấm vào nút “Đặt hàng”, tôi đồng ý với
-                            <a href="#" target="_blank">chính sách hoạt động</a> của chúng tôi.
+                            By clicking the “Place Order” button, I agree to our
+                            <a href="#" target="_blank">terms of service</a>.
                         </div>
                     </div>
                     <div class="total-checkout">
-                        <div class="text">Tổng tiền</div>
+                        <div class="text">Total</div>
                         <div class="price-bill">
                             <div class="price-final" id="checkout-cart-price-final">0</div>
                         </div>
                     </div>
-                    <button class="complete-checkout-btn">Đặt hàng</button>
+                    <button class="complete-checkout-btn">Place Order</button>
                 </div>
+
             </main>
         </div>
         <div id="toast"></div>

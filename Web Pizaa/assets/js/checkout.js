@@ -9,16 +9,16 @@ function thanhtoanpage(option, product) {
     ngaymai.setDate(today.getDate() + 1);
     ngaykia.setDate(today.getDate() + 2);
     let dateorderhtml = `<a href="javascript:;" class="pick-date active" data-date="${today}">
-        <span class="text">Hôm nay</span>
+        <span class="text">Today</span>
         <span class="date">${today.getDate()}/${today.getMonth() + 1}</span>
         </a>
         <a href="javascript:;" class="pick-date" data-date="${ngaymai}">
-            <span class="text">Ngày mai</span>
+            <span class="text">Tomorrow</span>
             <span class="date">${ngaymai.getDate()}/${ngaymai.getMonth() + 1}</span>
         </a>
 
         <a href="javascript:;" class="pick-date" data-date="${ngaykia}">
-            <span class="text">Ngày kia</span>
+            <span class="text">Day After Tomorrow</span>
             <span class="date">${ngaykia.getDate()}/${ngaykia.getMonth() + 1}</span>
     </a>`
     document.querySelector('.date-order').innerHTML = dateorderhtml;
@@ -37,45 +37,45 @@ function thanhtoanpage(option, product) {
         case 1: // Truong hop thanh toan san pham trong gio
             // Hien thi don hang
             showProductCart();
-            // Tinh tien
+            // Calculate the total
             totalBillOrderHtml = `<div class="priceFlx">
-            <div class="text">
-                Tiền hàng 
-                <span class="count">${getAmountCart()} món</span>
+                <div class="text">
+                    Merchandise 
+                    <span class="count">${getAmountCart()} items</span>
+                </div>
+                <div class="price-detail">
+                    <span id="checkout-cart-total">${vnd(getCartTotal())}</span>
+                </div>
             </div>
-            <div class="price-detail">
-                <span id="checkout-cart-total">${vnd(getCartTotal())}</span>
-            </div>
-        </div>
-        <div class="priceFlx chk-ship">
-            <div class="text">Phí vận chuyển</div>
-            <div class="price-detail chk-free-ship">
-                <span>${vnd(PHIVANCHUYEN)}</span>
-            </div>
-        </div>`;
+            <div class="priceFlx chk-ship">
+                <div class="text">Shipping fee</div>
+                <div class="price-detail chk-free-ship">
+                    <span>${vnd(PHIVANCHUYEN)}</span>
+                </div>
+            </div>`;
             // Tong tien
             priceFinal.innerText = vnd(getCartTotal() + PHIVANCHUYEN);
             break;
         case 2: // Truong hop mua ngay
             // Hien thi san pham
             showProductBuyNow(product);
-            // Tinh tien
+            // Calculate the total
             totalBillOrderHtml = `<div class="priceFlx">
                 <div class="text">
-                    Tiền hàng 
-                    <span class="count">${product.soluong} món</span>
+                    Merchandise 
+                    <span class="count">${product.soluong} items</span>
                 </div>
                 <div class="price-detail">
                     <span id="checkout-cart-total">${vnd(product.soluong * product.price)}</span>
                 </div>
             </div>
             <div class="priceFlx chk-ship">
-                <div class="text">Phí vận chuyển</div>
+                <div class="text">Shipping fee</div>
                 <div class="price-detail chk-free-ship">
                     <span>${vnd(PHIVANCHUYEN)}</span>
                 </div>
-            </div>`
-                // Tong tien
+            </div>`;
+            // Tong tien
             priceFinal.innerText = vnd((product.soluong * product.price) + PHIVANCHUYEN);
             break;
     }
@@ -262,8 +262,14 @@ function xulyDathang(product) {
     let tennguoinhan = document.querySelector("#tennguoinhan").value;
     let sdtnhan = document.querySelector("#sdtnhan").value
 
-    if (tennguoinhan == "" || sdtnhan == "" || diachinhan == "") {
-        toast({ title: 'Chú ý', message: 'Vui lòng nhập đầy đủ thông tin !', type: 'warning', duration: 4000 });
+    if (recipientName == "" || recipientPhone == "" || recipientAddress == "") {
+        toast({
+            title: 'Attention',
+            message: 'Please enter all required information!',
+            type: 'warning',
+            duration: 4000
+        });
+
     } else {
         let donhang = {
             id: madon,
@@ -290,7 +296,7 @@ function xulyDathang(product) {
         localStorage.setItem("orderDetails", JSON.stringify(orderDetails));
         toast({ title: 'Thành công', message: 'Đặt hàng thành công !', type: 'success', duration: 1000 });
         setTimeout((e) => {
-            window.location = "index.html";
+            window.location = "index1.html";
         }, 2000);
     }
 }
