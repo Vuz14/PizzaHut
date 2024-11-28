@@ -109,7 +109,38 @@
             });
         }
 
+        // gui tin nhan
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Ngăn chặn hành động mặc định (không chuyển trang)
 
+            // Gửi dữ liệu form qua Fetch API
+            const formData = new FormData(this);
+            fetch(this.action, {
+                    method: this.method,
+                    body: formData,
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Hiển thị thông báo thành công
+                        const successMessage = document.getElementById('successMessage');
+                        successMessage.style.display = 'inline';
+
+                        // Xóa các trường trong form
+                        this.reset();
+
+                        // Tự động ẩn thông báo sau 3 giây
+                        setTimeout(() => {
+                            successMessage.style.display = 'none';
+                        }, 3000);
+                    } else {
+                        alert("Gửi không thành công. Vui lòng thử lại!");
+                    }
+                })
+                .catch(error => {
+                    console.error("Có lỗi xảy ra:", error);
+                    alert("Gửi không thành công. Vui lòng thử lại!");
+                });
+        });
         // ## Offer CountDown //
         if ($('.offer-countdown-wrap').length !== 0) {
             const second = 1000,

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Test</title>
+    <style>
+        #successMessage {
+            display: none;
+            color: green;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="contactForm">
+        <input type="text" name="name" placeholder="Name" required>
+        <button type="submit">Send Message Us</button>
+        <p id="successMessage">Sent successfully!</p>
+    </form>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Ngăn chuyển trang
+            const successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block'; // Hiển thị thông báo
+            console.log("Form submitted!"); // Kiểm tra log
+        });
+    </script>
+</body>
+
+</html>
